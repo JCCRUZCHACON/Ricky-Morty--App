@@ -1,19 +1,14 @@
-const LocationInfo = ({currentLocation}) => {
-
-  return (
-    <section>
-      <h1 className="p-10 w-[1200px] text-yellow-300 font-black">¡Welcome to the crazy universe</h1>
-    <section>
-      
-      <h2>{currentLocation?.name}</h2>
-      <ul>
-        <li>Type: {currentLocation?.type}</li>
-        <li>Dimension: {currentLocation?.dimension}</li>
-        <li>Population: {currentLocation?.residents.length}</li>
-      </ul>
-    </section>
-    </section>
-  )
+const LocationInfo = ({ currentLocation }) => {
+    return (
+        <section className="flex flex-col items-center bg-light-yellow mt-4 p-4 rounded-3xl text-black shadow-md gap-2 w-[260px] min-[500px]:w-full min-[500px]:max-w-[1024px]">
+            <h2 className="text-xl font-bold text-center">{currentLocation?.name}</h2>
+            <ul className="grid grid-rows-3 place-items-start gap-1 sm:grid-rows-none sm:grid-cols-3 sm:gap-12">
+                <li>Type: {currentLocation?.type}</li>
+                <li>Dimension: {currentLocation?.dimension}</li>
+                <li>Population: {currentLocation?.residents.length}</li>
+            </ul>
+        </section>
+    )
 }
-export default LocationInfo
 
+export default LocationInfo
